@@ -3,7 +3,7 @@ import static java.lang.Math.*;
 public class Main {
   public static void main(String[] args) {
     Scanner scan = new Scanner(System.in);
-    System.out.println("this is APPC WA 1c");
+    System.out.println("this is 1c");
     //question1
     System.out.println("");
     System.out.println("Question one:");
