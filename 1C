@@ -1,0 +1,68 @@
+import java.util.*;
+import static java.lang.Math.*;
+public class Main {
+  public static void main(String[] args) {
+    Scanner scan = new Scanner(System.in);
+    System.out.println("this is APPC WA 1c");
+    //question1
+    System.out.println("");
+    System.out.println("Question one:");
+    System.out.println("Enter value for a,v, (seperately)");
+    double a = scan.nextDouble();
+    double v = scan.nextDouble();
+    //(a)
+    System.out.println("Position vector: " +v+" t i + "+a/2+" t^2 j");
+    //(b)
+    System.out.println("Velocity vector: " +v+" t i + "+a+" t j");
+    //(c)
+    System.out.println("enter time");
+    double t = scan.nextDouble();
+    System.out.println("X = "+v*t + "m, Y = "+(a/2)*(t*t)+ "m");
+    //(d)
+    System.out.println("speed: "+ Math.sqrt(pow(v, 2)+pow(a*t,2) ));
+    
+    //question2
+    System.out.println("");
+    System.out.println("Question two: ");
+    System.out.println("Enter distance, initial speed( seperately)");
+    double d_2 = scan.nextDouble();
+    double v_2= scan.nextDouble();
+    System.out.println("g accelation: "+Math.pow(v_2,2)/d_2);
+
+    //question 3
+    System.out.println("");
+    System.out.println("Question three: ");
+    System.out.println("Enter how many times");
+    double t_3 = scan.nextDouble();
+    double pi = 3.14159265359;
+    System.out.println((Math.atan(4/t_3)/pi)*180);
+
+    //question4
+    System.out.println("");
+    System.out.println("Question four: ");
+    System.out.println("Enter initial velocity, angle, and time (seperately) ");
+    double v_4 = scan.nextDouble();
+    double a_4 = scan.nextDouble();
+    double t_4 = scan.nextDouble();
+    double ar_4 = (a_4/180)*pi;
+    double x_4= v_4*Math.cos(ar_4)*t_4;
+    double y_4= v_4*Math.sin(ar_4)*t_4-(9.8*Math.pow(t_4, 2))/2;
+    System.out.println("X = "+ x_4 +" m, Y = "+y_4+" m");
+
+    //question5
+    System.out.println("");
+    System.out.println("Question five: ");
+    System.out.println("Enter initial velocity, angle, and time (seperately) ");
+    double v_5 = scan.nextDouble();
+    double a_5 = scan.nextDouble();
+    double t_5 = scan.nextDouble();
+    double ar_5 = (a_5/180)*pi;
+    double x_5= v_5*Math.cos(-ar_5)*t_5;
+    double y_5= v_5*Math.sin(-ar_5)*t_5-(9.8*Math.pow(t_5, 2))/2;
+    double lon = (-v_5*sin(-ar_5)-Math.sqrt(Math.pow((-v_5*sin(-ar_5)),2)+4*4.9*10))/(-9.8);
+    System.out.println("Horizontally: "+x_5+" m");
+    System.out.println("Height: "+-y_5+" m");
+    System.out.println("How long: "+lon+" s");
+
+  }
+}
