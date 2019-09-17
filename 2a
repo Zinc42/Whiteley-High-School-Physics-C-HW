@@ -1,0 +1,87 @@
+import java.util.*;
+import static java.lang.Math.*;
+public class Main {
+  public static void main(String[] args) {
+    Scanner scan = new Scanner(System.in);
+    System.out.println("this is APPC WA 2a");
+    System.out.println("Enter every red number on seperate lines");
+   
+    //question 1
+    System.out.println();
+    System.out.println("Question 1: ");
+    System.out.println("Enter Pound");
+    double p1 = scan.nextDouble();
+    double kg1 = 0.45359237*p1;
+    double w1 = kg1*9.8;
+    System.out.println("Weight: "+w1);
+    System.out.println("Mass: "+kg1);
+   
+    //question 2
+    System.out.println();
+    System.out.println("Question 2: ");
+    System.out.println("Enter kg");
+    double w2 = scan.nextDouble();
+    System.out.println("Enter speed");
+    double v2 = scan.nextDouble();
+    System.out.println("0");
+    System.out.println("0");
+   
+    //question 3
+    System.out.println();
+    System.out.println("Question 3: ");
+    System.out.println("(a)");
+    System.out.println("Enter lb");
+    double p3 = scan.nextDouble();
+    System.out.println("magnitude: "+p3);
+    System.out.println("upward");
+    System.out.println("(b)");
+    double p33=scan.nextDouble();
+    double p333=p3-p33;
+    System.out.println("magnitude: "+p333);
+    System.out.println("upward");
+    System.out.println("(c)");
+    double p3333 = scan.nextDouble();
+    if (p3333>=p3){
+    System.out.println("magnitude: "+"0");
+    System.out.println("the floor does not exert force on block");
+    }else{
+        System.out.println("magnitude: "+(p3-p3333));
+        System.out.println("upward");
+    }
+    
+    //question4
+    System.out.println();
+    System.out.println("Question 4: ");
+    System.out.println("Enter N");
+    double newton = scan.nextDouble();
+    System.out.println("Enter angle 1");
+    double theta1=scan.nextDouble();
+    System.out.println("Enter angle 2");
+    double theta2=scan.nextDouble();
+    double a1=cos(theta1*0.0174533);
+    double b1=-cos(theta2*0.0174533);
+    double c1 = 0;
+    double a2=sin(theta1*0.0174533);
+    double b2 = sin(theta2*0.0174533);
+    double c2 = newton;
+    double x4=(b2*c1-b1*c2)/(b2*a1-b1*a2);
+    double y4 =(a2*c1-a1*c2)/(a2*b1-a1*b2);
+    
+    System.out.println("T1: "+x4);
+    System.out.println("T2: "+y4);
+    System.out.println("T3: "+newton);
+    
+    //question 5
+    System.out.println();
+    System.out.println("Question 5: ");
+    System.out.println("Enter kg");
+    double kg5 = scan.nextDouble();
+    System.out.println("Enter degree");
+    double d5 = scan.nextDouble();
+    
+    System.out.println("(a): "+(kg5*9.8));
+    System.out.println("(b): "+(kg5*9.8));
+    System.out.println("(c): "+(kg5*19.6));
+    System.out.println("(d): "+(kg5*9.8*sin(d5*0.0174533)));
+  }
+}
